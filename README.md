@@ -122,6 +122,47 @@ AirBnB Clone project.
   Gives administrators an overview of platform metrics (users, listings, bookings, revenue), with tools to manage content, moderate users/reviews, and configure global settings.
 
 
+  ## API Security
+
+- **Authentication**  
+  Use JWT-based login and OAuth2 to verify user identity.  
+  *Why:* Ensures only legitimate users can access protected endpoints, preventing account takeover.
+
+- **Authorization (RBAC)**  
+  Enforce role-based access control on every endpoint (guest, host, admin).  
+  *Why:* Prevents users from performing actions beyond their permissions (e.g., creating bookings for other users).
+
+- **Rate Limiting & Throttling**  
+  Apply per-IP and per-API-key rate limits.  
+  *Why:* Protects against brute-force attacks and denial-of-service by limiting request volume.
+
+- **Input Validation & Sanitization**  
+  Validate all incoming payloads with strict schemas (e.g., Pydantic) and sanitize strings.  
+  *Why:* Prevents injection attacks (SQL, NoSQL, XSS) and ensures data integrity.
+
+- **Transport Security (HTTPS/TLS)**  
+  Serve all API traffic over HTTPS with HSTS headers.  
+  *Why:* Encrypts data in transit to protect sensitive information (passwords, payment tokens).
+
+- **Data Encryption at Rest**  
+  Encrypt database fields (e.g., payment details) and backups.  
+  *Why:* Protects user data if storage media are compromised.
+
+- **CSRF & CORS Protection**  
+  Enable CSRF tokens for state-changing requests and restrict CORS to trusted origins.  
+  *Why:* Prevents cross-site request forgery and unauthorized cross-domain API calls.
+
+- **Security Headers**  
+  Set HTTP headers like Content-Security-Policy, X-Frame-Options, and X-XSS-Protection.  
+  *Why:* Mitigates common browser-based attacks by instructing clients how to handle content.
+
+- **Logging & Monitoring**  
+  Log all authentication events, errors, and suspicious activity; integrate with an alerting system.  
+  *Why:* Enables rapid detection and response to security incidents.
+
+
+
+
 
 
 
