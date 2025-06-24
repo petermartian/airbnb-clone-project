@@ -161,6 +161,23 @@ AirBnB Clone project.
   *Why:* Enables rapid detection and response to security incidents.
 
 
+  ## CI/CD Pipeline
+
+Continuous Integration and Continuous Deployment (CI/CD) pipelines automate the process of integrating code changes, running tests, building artifacts, and deploying applications. They:
+
+- Catch bugs early by automatically testing every commit  
+- Ensure consistent, repeatable builds and deployments  
+- Reduce manual effort and speed up delivery to production  
+
+**Tools & Technologies**  
+- **GitHub Actions**: Define workflows that run on every push or pull request to build, test, and deploy your application.  
+- **Docker**: Containerize your application and its dependencies for consistent environments across development, testing, and production.  
+- **Docker Compose**: Orchestrate multi-container setups locally for integration testing.  
+- **Terraform** (optional): Automate infrastructure provisioning as part of your pipeline.  
+- **AWS CodePipeline** / **Jenkins** (alternatives): Orchestrate complex pipeline stages in cloud or on-premises environments.
+
+
+
 
 
 
