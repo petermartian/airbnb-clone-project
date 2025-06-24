@@ -95,6 +95,34 @@ AirBnB Clone project.
 - Each **Booking** has one **Payment**.  
 - A **User** can leave multiple **Reviews** on **Properties** they’ve booked.
 
+## Feature Breakdown
+
+- **User Management**  
+  Allows users to sign up, log in, and manage their profile (guests and hosts). Includes email verification, password reset, and role-based access control to distinguish between guest, host, and admin actions.
+
+- **Property Management**  
+  Enables hosts to create, edit, and remove property listings with photos, descriptions, pricing, and availability calendars. Hosts can set house rules, amenities, and manage booking requests directly from their dashboard.
+
+- **Booking System**  
+  Lets guests search availability, create booking requests, and view their upcoming and past stays. Includes real-time availability checks, booking status updates (pending, confirmed, cancelled), and calendar integration for hosts and guests.
+
+- **Review & Rating**  
+  Permits guests to leave ratings and comments after a stay, and allows hosts to respond. Reviews help build trust within the community and inform future guests’ booking decisions.
+
+- **Payment Processing**  
+  Integrates with a payment gateway to handle secure transactions for booking payments, refunds, and payout schedules to hosts. Ensures PCI compliance and provides transaction history for both guests and hosts.
+
+- **Search & Filtering**  
+  Provides a robust search interface with filters for location, price range, dates, property type, and amenities. Improves user experience by helping guests quickly find listings that match their criteria.
+
+- **Messaging System**  
+  Facilitates in-app communication between guests and hosts for pre-booking inquiries, check-in details, and post-stay follow-ups. Supports notifications and message threading for clear conversation history.
+
+- **Admin Dashboard**  
+  Gives administrators an overview of platform metrics (users, listings, bookings, revenue), with tools to manage content, moderate users/reviews, and configure global settings.
+
+
+
 
 
 
