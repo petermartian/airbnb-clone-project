@@ -44,4 +44,57 @@ AirBnB Clone project.
 - **AWS (EC2, RDS, S3)**  
   Hosts our application servers (EC2), managed database (RDS), and static/media assets (S3).
 
+  ## Database Design
+
+### Entities & Fields
+
+- **Users**  
+  - `id` (PK)  
+  - `name`  
+  - `email` (unique)  
+  - `password_hash`  
+  - `role` (e.g. guest, host, admin)
+
+- **Properties**  
+  - `id` (PK)  
+  - `owner_id` (FK → Users.id)  
+  - `title`  
+  - `description`  
+  - `location`  
+  - `price_per_night`
+
+- **Bookings**  
+  - `id` (PK)  
+  - `user_id` (FK → Users.id)  
+  - `property_id` (FK → Properties.id)  
+  - `start_date`  
+  - `end_date`  
+  - `status` (e.g. pending, confirmed, cancelled)
+
+- **Reviews**  
+  - `id` (PK)  
+  - `user_id` (FK → Users.id)  
+  - `property_id` (FK → Properties.id)  
+  - `rating` (1–5)  
+  - `comment`  
+  - `created_at`
+
+- **Payments**  
+  - `id` (PK)  
+  - `booking_id` (FK → Bookings.id)  
+  - `amount`  
+  - `payment_method`  
+  - `status` (e.g. paid, refunded)  
+  - `paid_at`
+
+### Relationships
+
+- A **User** can own multiple **Properties**.  
+- A **Property** can have many **Bookings**.  
+- A **Booking** belongs to one **User** (the guest) and one **Property**.  
+- Each **Booking** has one **Payment**.  
+- A **User** can leave multiple **Reviews** on **Properties** they’ve booked.
+
+
+
 
